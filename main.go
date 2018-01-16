@@ -6,9 +6,10 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("http://10.142.0.2")
+	const t = "http://10.142.0.2"
+	resp, err := http.Get(t)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(resp.Status)
+	fmt.Printf("GET request to %s and the result was %s\n", t, resp.Status)
 }
