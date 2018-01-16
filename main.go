@@ -8,7 +8,10 @@ import (
 )
 
 func main() {
-	pinger, err := ping.NewPinger("10.128.0.3")
+	const t = "www.google.com"
+	fmt.Println(t)
+
+	pinger, err := ping.NewPinger(t)
 	if err != nil {
 		panic(err)
 	}
