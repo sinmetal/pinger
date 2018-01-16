@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	const t = "http://10.142.0.2"
+	const t = "http://10.128.0.5"
 	resp, err := http.Get(t)
 	if err != nil {
 		panic(err)
