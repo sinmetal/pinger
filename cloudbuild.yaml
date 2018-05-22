@@ -1,15 +1,6 @@
 
 steps:
 - name: 'gcr.io/cloud-builders/go'
-  args: ['get', './...']
-  env: ['PROJECT_ROOT=github.com/sinmetal/pinger']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['generate']
-  env: ['PROJECT_ROOT=github.com/sinmetal/pinger']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['test', '.']
-  env: ['PROJECT_ROOT=github.com/sinmetal/pinger']
-- name: 'gcr.io/cloud-builders/go'
   args: ['install', '-a', '-ldflags', "'-s'", '-installsuffix', 'cgo', 'github.com/sinmetal/pinger']
   env: [
     'PROJECT_ROOT=github.com/sinmetal/pinger',
