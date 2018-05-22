@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	const t = "http://10.128.0.2"
+	const t = "http://10.146.0.3"
 
 	for {
 		time.Sleep(time.Second * 3)
